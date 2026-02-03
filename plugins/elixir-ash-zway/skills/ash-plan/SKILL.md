@@ -35,8 +35,13 @@ Investigate the codebase to ensure the plan fits existing patterns.
    - Module naming conventions
    - Resource structure (attributes, actions, calculations)
    - Test organization and style
-3. **Gather usage rules** - Use the `usage-rules` skill to get best practices for affected packages. If no matching rule exists, fall back to `hex-docs-search`.
-4. **Check for existing tests** - Determine if tests already cover the affected functionality.
+3. **Identify reusable components** - Look for existing helpers, utilities, and Ash calculations that could be leveraged:
+   - Search for helper modules that might provide needed functionality
+   - Check existing Ash calculations on related resources
+   - Identify shared utilities that avoid code duplication
+   - Prefer reusing existing code over creating new implementations
+4. **Gather usage rules** - Use the `usage-rules` skill to get best practices for affected packages. If no matching rule exists, fall back to `hex-docs-search`.
+5. **Check for existing tests** - Determine if tests already cover the affected functionality.
 
 ---
 
@@ -72,6 +77,14 @@ One paragraph describing what will be implemented and why.
 ## Open Questions (if any)
 - Questions that arose during analysis
 ```
+
+## Phase 4: Implementation
+
+Once the plan is created, present it to the user for review. 
+
+- If the user approves the plan, switch to the `ash-execute` skill to implement it
+- If the user requests modifications, refine the plan based on their feedback before proceeding
+- Pass the complete plan to `ash-execute` as the implementation guide
 
 ### Scope Guidelines
 
