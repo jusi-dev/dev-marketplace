@@ -1,0 +1,9 @@
+{
+  "name": "dev",
+  "owner": {"name": "Justin Winistörfer"},
+  "plugins": [{
+    "name": "elixir-ash-zway",
+    "source": "./plugins/elixir-ash-zway",
+    "description": "An plugin which converts the way how zebbra works to use Ash Framework to the LLM World!."
+  }]
+}

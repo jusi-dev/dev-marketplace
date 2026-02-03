@@ -1,0 +1,7 @@
+{
+    "name": "elixir-ash-zway",
+    "description": "A plugin which transfers the workflow of building Elixir applications with Ash Framework @ zebbra to the LLM World.",
+    "version": "1.0.0",
+    "author": {"name": "Justin Winistörfer"},
+    "skills": ["./skills/"]
+}
