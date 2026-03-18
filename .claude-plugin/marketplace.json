@@ -5,5 +5,9 @@
     "name": "elixir-ash-zway",
     "source": "./plugins/elixir-ash-zway",
     "description": "An plugin which converts the way how zebbra works to use Ash Framework to the LLM World!."
+  }, {
+    "name": "commit-convention",
+    "source": "./plugins/commit-convention",
+    "description": "Enforces conventional commit message format with short, precise messages and no co-author attribution."
   }]
 }

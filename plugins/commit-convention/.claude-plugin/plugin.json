@@ -1,0 +1,7 @@
+{
+    "name": "commit-convention",
+    "description": "Enforces conventional commit message format with short, precise messages and no co-author attribution.",
+    "version": "1.0.0",
+    "author": {"name": "Justin Winistörfer"},
+    "skills": ["./skills/"]
+}
