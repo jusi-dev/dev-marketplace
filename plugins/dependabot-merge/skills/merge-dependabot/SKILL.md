@@ -38,6 +38,7 @@ Before doing anything else, temporarily grant auto-approval for the commands thi
       "Bash(yarn install*)",
       "Bash(pnpm install*)",
       "Bash(npx tsc *)",
+      "Bash(npx eslint *)",
       "Bash(docker build *)",
       "Bash(docker rmi *)"
     ]
@@ -120,7 +121,20 @@ If tsc fails, analyze the errors. If they are type errors caused by the dependen
 - Re-run tsc to confirm.
 - If unable to fix, report the errors to the user and ask how to proceed.
 
-### 4b. Test Suite
+### 4b. ESLint Check (if applicable)
+
+Only run if an ESLint config exists in the project (`.eslintrc.*`, `eslint.config.*`, or an `eslintConfig` key in `package.json`).
+
+```bash
+npx eslint .
+```
+
+If ESLint fails, analyze the errors. If they are caused by the dependency updates (e.g. new rule defaults from an updated plugin):
+- Attempt to fix automatically with `npx eslint . --fix`.
+- Re-run ESLint to confirm.
+- If unable to fix, report the errors to the user and ask how to proceed.
+
+### 4c. Test Suite
 
 Detect the test runner from `package.json` scripts and run the test suite:
 
@@ -135,7 +149,7 @@ If tests fail:
 - Attempt to fix if straightforward.
 - If unable to fix, report to the user and ask how to proceed.
 
-### 4c. Docker Image Build (if applicable)
+### 4d. Docker Image Build (if applicable)
 
 Only run if a `Dockerfile` exists in the project root.
 
@@ -176,6 +190,7 @@ docker rmi dependabot-validation-test 2>/dev/null || true
    ## Validation
 
    - [x] TypeScript compilation (or N/A)
+   - [x] ESLint (or N/A)
    - [x] Test suite
    - [x] Docker build (or N/A)
 
