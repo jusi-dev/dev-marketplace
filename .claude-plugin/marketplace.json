@@ -9,5 +9,9 @@
     "name": "commit-convention",
     "source": "./plugins/commit-convention",
     "description": "Enforces conventional commit message format with short, precise messages and no co-author attribution."
+  }, {
+    "name": "dependabot-merge",
+    "source": "./plugins/dependabot-merge",
+    "description": "Finds all open Dependabot PRs, merges them into a single branch, validates everything (tsc, tests, Docker build), and creates a combined PR."
   }]
 }

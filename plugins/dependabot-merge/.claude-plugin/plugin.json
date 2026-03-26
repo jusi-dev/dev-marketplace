@@ -1,0 +1,7 @@
+{
+    "name": "dependabot-merge",
+    "description": "Finds all open Dependabot PRs, merges them into a single branch, validates everything (tsc, tests, Docker build), and creates a combined PR.",
+    "version": "1.0.0",
+    "author": {"name": "Justin Winistörfer"},
+    "skills": ["./skills/"]
+}
